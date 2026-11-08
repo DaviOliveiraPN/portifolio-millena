@@ -1,5 +1,6 @@
 import Image from 'next/image';
 import { profile } from '@/content/site';
+import { asset } from '@/lib/asset';
 
 function initials(name: string) {
   return name
@@ -32,7 +33,7 @@ function Sobre() {
         <figure className="hero__photo">
           {profile.photo ? (
             <Image
-              src={profile.photo}
+              src={asset(profile.photo)}
               alt={`Foto de ${profile.name}`}
               fill
               sizes="(max-width: 860px) 100vw, 40vw"

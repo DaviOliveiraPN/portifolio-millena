@@ -1,5 +1,6 @@
 import Section from '@/components/Section';
 import { education, experience, resumePdf, skills } from '@/content/site';
+import { asset } from '@/lib/asset';
 
 function Curriculo() {
   return (
@@ -39,7 +40,7 @@ function Curriculo() {
             ))}
           </ul>
 
-          <a href={resumePdf} className="button button--primary" download>
+          <a href={asset(resumePdf)} className="button button--primary" download>
             Baixar currículo (PDF)
           </a>
         </div>
