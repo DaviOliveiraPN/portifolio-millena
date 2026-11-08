@@ -11,7 +11,9 @@
     "dev": "next dev",
     "build": "next build",
     "start": "next start",
-    "test": "jest"
+    "test": "jest",
+    "build:pages": "NEXT_PUBLIC_BASE_PATH=/portifolio-millena next build",
+    "deploy": "npm test && npm run build:pages && gh-pages -d out --dotfiles -m \"Deploy do portfólio\""
   },
   "devDependencies": {
     "@testing-library/dom": "^10.4.2",
@@ -21,6 +23,7 @@
     "@types/node": "^26.6.6",
     "@types/react": "^19.3.0",
     "@types/react-dom": "^19.3.0",
+    "gh-pages": "^6.3.0",
     "jest": "^30.5.2",
     "jest-environment-jsdom": "^30.5.2",
     "ts-node": "^10.9.2",
